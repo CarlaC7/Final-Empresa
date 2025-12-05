@@ -1,0 +1,38 @@
+type CompanyInfo @table {
+  name: String!
+  missionStatement: String
+  history: String
+  phone: String
+  email: String
+  address: String
+  createdAt: Timestamp!
+  updatedAt: Timestamp!
+}
+
+type Service @table {
+  name: String!
+  description: String!
+  imageUrl: String
+  priceRange: String
+  createdAt: Timestamp!
+  updatedAt: Timestamp!
+}
+
+type ContactMessage @table {
+  senderName: String!
+  senderEmail: String!
+  senderPhone: String
+  subject: String!
+  message: String!
+  createdAt: Timestamp!
+}
+
+type TeamMember @table {
+  name: String!
+  role: String!
+  bio: String
+  imageUrl: String
+  email: String
+  createdAt: Timestamp!
+  updatedAt: Timestamp!
+}

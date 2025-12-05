@@ -1,0 +1,24 @@
+export default `<link rel="stylesheet" href="styles-JYGXX33H.css"><!doctype html>
+<html lang="en">
+<head><base href="/Final-Empresa/">
+  <meta charset="utf-8">
+  <title>Final</title>
+  <link rel="stylesheet" href="styles/header.css">
+  <link rel="stylesheet" href="styles/menu.css">
+  <link rel="stylesheet" href="styles/footer.css">
+  <link rel="stylesheet" href="styles/inicio.css">
+  <link rel="stylesheet" href="styles/empresa.css">
+  <link rel="stylesheet" href="styles/empleados.css">
+  <link rel="stylesheet" href="styles/servicios.css">
+  <link rel="stylesheet" href="styles/global.css"> 
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+<body ngcm="">
+
+ 
+  <app-root></app-root>
+<script src="main-SZRS7FVN.js" type="module"></script></body>
+</html>
+`;

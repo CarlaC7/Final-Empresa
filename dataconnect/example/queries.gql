@@ -1,0 +1,60 @@
+mutation CreateContactMessage(
+  $senderName: String!
+  $senderEmail: String!
+  $subject: String!
+  $message: String!
+  $senderPhone: String
+) @auth(level: PUBLIC, insecureReason: "This operation is safe to expose to the public") {
+  contactMessage_insert(
+    data: {
+      senderName: $senderName
+      senderEmail: $senderEmail
+      subject: $subject
+      message: $message
+      senderPhone: $senderPhone
+      createdAt_expr: "request.time"
+    }
+  )
+}
+
+query ListServices @auth(level: PUBLIC, insecureReason: "This operation is safe to expose to the public") {
+  services {
+    id
+    name
+    description
+    imageUrl
+    priceRange
+  }
+}
+
+query GetTeamMembers @auth(level: PUBLIC, insecureReason: "This operation is safe to expose to the public") {
+  teamMembers {
+    id
+    name
+    role
+    imageUrl
+  }
+}
+
+mutation UpdateCompanyInfo(
+  $id: UUID!
+  $address: String
+  $email: String
+  $history: String
+  $missionStatement: String
+  $name: String
+  $phone: String
+) @auth(level: USER, insecureReason: "This operation is safe to expose to all logged in users.") {
+  companyInfo_update(
+    id: $id
+    data: {
+      address: $address
+      email: $email
+      history: $history
+      missionStatement: $missionStatement
+      name: $name
+      phone: $phone
+      updatedAt_expr: "request.time"
+    }
+  )
+}

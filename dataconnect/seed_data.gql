@@ -1,0 +1,74 @@
+mutation SeedDatabase @auth(level: NO_ACCESS) @transaction {
+  companyInfo_insertMany(data: [
+    {
+      name: "Example Company 1",
+      address: "123 Main St",
+      email: "info@example1.com",
+      phone: "555-1234",
+      history: "Founded in 2020",
+      missionStatement: "To provide excellent service",
+      createdAt: "2024-08-22T12:00:00Z",
+      updatedAt: "2024-08-22T12:00:00Z"
+    },
+    {
+      name: "Example Company 2",
+      address: "456 Elm St",
+      email: "info@example2.com",
+      phone: "555-5678",
+      history: "Founded in 2021",
+      missionStatement: "To innovate and create",
+      createdAt: "2024-08-22T12:00:00Z",
+      updatedAt: "2024-08-22T12:00:00Z"
+    }
+  ])
+  teamMember_insertMany(data: [
+    {
+      name: "John Doe",
+      role: "CEO",
+      email: "john.doe@example.com",
+      bio: "Experienced leader",
+      createdAt: "2024-08-22T12:00:00Z",
+      updatedAt: "2024-08-22T12:00:00Z"
+    },
+    {
+      name: "Jane Smith",
+      role: "Engineer",
+      email: "jane.smith@example.com",
+      bio: "Software expert",
+      createdAt: "2024-08-22T12:00:00Z",
+      updatedAt: "2024-08-22T12:00:00Z"
+    }
+  ])
+  service_insertMany(data: [
+    {
+      name: "Consulting",
+      description: "Expert consulting services",
+      priceRange: "$100-$500",
+      createdAt: "2024-08-22T12:00:00Z",
+      updatedAt: "2024-08-22T12:00:00Z"
+    },
+    {
+      name: "Development",
+      description: "Custom development solutions",
+      priceRange: "$500-$1000",
+      createdAt: "2024-08-22T12:00:00Z",
+      updatedAt: "2024-08-22T12:00:00Z"
+    }
+  ])
+  contactMessage_insertMany(data: [
+    {
+      senderName: "Bob User",
+      senderEmail: "bob@example.com",
+      subject: "Inquiry about services",
+      message: "I am interested in your services.",
+      createdAt: "2024-08-22T12:00:00Z"
+    },
+    {
+      senderName: "Alice User",
+      senderEmail: "alice@example.com",
+      subject: "Feedback on your website",
+      message: "I have some feedback on your website.",
+      createdAt: "2024-08-22T12:00:00Z"
+    }
+  ])
+}
