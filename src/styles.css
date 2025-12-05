@@ -1,0 +1,28 @@
+body {
+  background-color: #f7f7f7;
+  color: #333;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Modo oscuro activado por checkbox */
+#darkModeToggle:checked ~ body,
+#darkModeToggle:checked ~ header,
+#darkModeToggle:checked ~ main,
+#darkModeToggle:checked ~ nav,
+#darkModeToggle:checked ~ footer {
+  background-color: #121212;
+  color: #f1f1f1;
+}
+
+a {
+  color: #2196f3;
+}
+
+body.dark a {
+  color: #90caf9;
+}
+
+/* Opciones de estilo de header, nav, footer */
+header, footer, nav, main {
+  padding: 1rem;
+}
